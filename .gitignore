@@ -1,0 +1,39 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual Environment
+venv/
+.env
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Models (too large for git - use Git LFS or download script)
+saved_models/
+ch_PP-OCRv4_det_infer/
+ch_PP-OCRv4_det_infer.tar
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp / Scratch
+fix.py
+*.jpg
+*.png
+!frontend/public/*.png
+extraction_report.md
+recognition_report.md
+RobotoMono-Regular.ttf
+scripts/

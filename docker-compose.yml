@@ -1,0 +1,18 @@
+﻿services:
+  invoice-ai:
+    build: .
+    container_name: invoice-ai-server
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./saved_models:/app/saved_models
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
